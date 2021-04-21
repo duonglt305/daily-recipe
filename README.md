@@ -1,4 +1,4 @@
-# dailyrecipe
+# DailyRecipe
 
 A new Flutter application.
 

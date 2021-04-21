@@ -1,10 +1,15 @@
-import 'package:dailyrecipe/screens/welcome.dart';
+import 'package:dailyrecipe/screens/welcome/welcome_screen.dart';
 import 'package:dailyrecipe/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(
+      MultiBlocProvider(
+        providers: [
+          BlocProvider()
+        ],
+      ),
+    );
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

@@ -34,21 +34,13 @@ class WelcomeScreen extends StatelessWidget {
               Spacer(flex: 2),
               PrimaryButton(
                 text: "Sign In",
-                onPress: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SignInScreen(),
-                  ),
-                ),
+                onPress: () => Navigator.of(context)
+                    .pushReplacementNamed(SignInScreen.route),
               ),
               SizedBox(height: 45),
               GestureDetector(
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SignUpScreen(),
-                  ),
-                ),
+                onTap: () => Navigator.of(context)
+                    .pushReplacementNamed(SignUpScreen.route),
                 child: Text(
                   "Sign Up",
                   style: TextStyle(

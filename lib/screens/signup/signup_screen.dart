@@ -13,18 +13,16 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage("assets/images/welcome-bg.png"),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
           SingleChildScrollView(
             child: SizedBox(
               height: MediaQuery.of(context).size.height,
               child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/welcome-bg.png"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
                 width: double.infinity,
                 padding: const EdgeInsets.symmetric(
                     horizontal: defaultPadding * 1.5),
@@ -90,12 +88,8 @@ class SignUpScreen extends StatelessWidget {
                           style: TextStyle(color: navyColor, fontSize: 14),
                         ),
                         GestureDetector(
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SignInScreen(),
-                            ),
-                          ),
+                          onTap: () => Navigator.of(context)
+                              .pushReplacementNamed(SignInScreen.route),
                           child: Text(
                             "Sign In",
                             textAlign: TextAlign.center,

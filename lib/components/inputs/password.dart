@@ -31,7 +31,7 @@ class _PasswordInputFieldState extends State<PasswordInputField> {
           suffixIcon: GestureDetector(
             onTap: () {
               setState(() {
-                this._obscureText = !this._obscureText;
+                _obscureText = !_obscureText;
               });
             },
             child: Padding(
@@ -40,7 +40,7 @@ class _PasswordInputFieldState extends State<PasswordInputField> {
             ),
           ),
         ),
-        onSaved: (p) => this._password = p,
+        onSaved: (p) => _password = p,
       ),
     );
   }
